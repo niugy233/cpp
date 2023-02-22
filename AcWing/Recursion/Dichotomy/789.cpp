@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef pair<int ,int > PII;
-int num[10005];
+int num[100005];
 vector<PII> ans;
 bool haveans = false;
 
@@ -17,11 +17,11 @@ void find(int sit){
     }
     ans.push_back({l + 1,r - 1});    
 }
-// 二分查找
+// 二分查找主要需要考虑边界问题
 void search(int n,int a){
     int i = 0,j = n - 1;
     int sit = (i + j) / 2;
-    while(n--){
+    while(i < j){
         if(num[sit] == a){
             find(sit);
             haveans = true;

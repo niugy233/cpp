@@ -12,6 +12,7 @@ long long judge(long long E){
         if(E < 0){
             return E;
         }
+        // 数据在1到1e5之间所以能量超过1e5时
         else if(E > 1e5)
         return true;
     }
@@ -21,6 +22,7 @@ long long judge(long long E){
 void solve(){
     int l = 0,r = 1e5 + 1;
     int mid = 0;
+    // 二分法最好能将数据夹杂在lr两个选项内
     while(r - l > 1){
         mid = (r + l)>>1;
         long long E = judge(mid);

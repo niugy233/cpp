@@ -37,7 +37,7 @@ int main(){
             // 需要寻找的目标sum
             int target =num - a*a - b*b;
             // 二分是分数组的位置
-            int l = 0,r = k-1;
+            int l = 0,r = k;
             while(l + 1 < r){
                 int mid = (l+r) >> 1;
                 if(target <= record[mid].s)
@@ -47,8 +47,8 @@ int main(){
             }
             // 最终l和r重合
             // 寻找到合适的a,b,c,d;
-            if(record[l].s == target){
-                printf("%d %d %d %d",a,b,record[l].c,record[l].d);
+            if(record[r].s == target){
+                printf("%d %d %d %d",a,b,record[r].c,record[r].d);
                 return 0;
             }
         }

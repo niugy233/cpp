@@ -20,6 +20,8 @@ void BFS(int num){
 
     for(int i = num;i<=N;i++){
         ans.push_back(i);
+        // 每一次获取到新的数据相当于完成一次组合需要输出获取到的新的组合方式
+        // 不同于排列需要枚举获取全部数据
         print();
         BFS(i+1);
         ans.pop_back();
